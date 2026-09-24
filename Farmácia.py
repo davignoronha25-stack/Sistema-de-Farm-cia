@@ -20,7 +20,11 @@ def salvar_medicamentos(medicamentos):
         escritor = csv.DictWriter(arquivo, fieldnames=campos)
         escritor.writeheader()
         for medicamento in medicamentos:
+<<<<<<< HEAD
             escritor.writerow(medicamento)
+=======
+            escritor.writerow(medicamentos)
+>>>>>>> 36901240290c056176344e5f6169e6cb6500389d
 
 def cadastrar_medicamento(medicamentos):
     print("\n==========CADASTRAR MEDICAMENTOS==========")
@@ -29,9 +33,15 @@ def cadastrar_medicamento(medicamentos):
     quantidade = int(input("Digite a quantidade do medicamento: "))
 
     medicamento = {
+<<<<<<< HEAD
         "Nome": nome,
         "Categoria": categoria,
         "Quantidade": quantidade
+=======
+        "nome": nome,
+        "categoria": categoria,
+        "quantidade": quantidade
+>>>>>>> 36901240290c056176344e5f6169e6cb6500389d
     }
     medicamentos.append(medicamento)
     salvar_medicamentos(medicamentos)
@@ -46,9 +56,15 @@ def listar_medicamentos(medicamentos):
         return False
     for medicamento in medicamentos:
         print("------------------------")
+<<<<<<< HEAD
         print("Nome: ", medicamento["Nome"])
         print("Categoria: ", medicamento["Categoria"])
         print("Quantidade: ", medicamento["Quantidade"])
+=======
+        print("Nome: ", medicamento["nome"])
+        print("Categoria: ", medicamento["categoria"])
+        print("Quantidade: ", medicamento["quantidade"])
+>>>>>>> 36901240290c056176344e5f6169e6cb6500389d
 
     return True
 
@@ -59,8 +75,13 @@ def buscar_medicamento(medicamentos):
     encontrados = []
 
     for medicamento in medicamentos:
+<<<<<<< HEAD
         if (termo.lower() in medicamento["Nome"].lower() or
                 termo.lower() in medicamento["Categoria"].lower()):
+=======
+        if (termo.lower() in medicamento["nome"].lower() or
+                termo.lower() in medicamento["categoria"].lower()):
+>>>>>>> 36901240290c056176344e5f6169e6cb6500389d
 
             encontrados.append(medicamento)
 
@@ -72,8 +93,13 @@ def buscar_medicamento(medicamentos):
 
         for medicamento in encontrados:
             print("------------------------------")
+<<<<<<< HEAD
             print("Nome: ", medicamento["Nome"])
             print("Categoria: ", medicamento["Categoria"])
+=======
+            print("Nome: ", medicamento["nome"])
+            print("Categoria: ", medicamento["categoria"])
+>>>>>>> 36901240290c056176344e5f6169e6cb6500389d
 
     return encontrados
 
